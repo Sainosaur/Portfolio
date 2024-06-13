@@ -1,37 +1,32 @@
-import { Routes, Route, useLocation, useNavigate } from 'react-router'
-import Home from './components/Home'
+import { Routes, Route} from 'react-router'
 
-function App() {
-  const currentPage = useLocation()
-  const navigate = useNavigate()
+import Home from './components/routes/Home'
+import FourOFour from './components/routes/404'
+import Projects from './components/routes/Projects'
+import Certifications from './components/routes/Certifications'
 
-  const activePageClass = 'btn btn-outline'
-  const inActivePageClass = 'btn btn-ghost glass'
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
+import { useEffect } from "react";
+import { themeChange } from "theme-change";
+
+const App = () => {
+  useEffect(() => {
+    themeChange(false)
+  },[])
   return (
     <>
-    <div className="navbar bg-base-100">
-      <div className='navbar-start'>
-        <button className="btn btn-ghost text-xl">Portfolio</button>
-        <span className='loading loading-infinity'></span>
-      </div>
-      <div className='navbar-center'>
-        <button className={currentPage.pathname == '/' ? activePageClass : inActivePageClass} onClick={() => navigate('/')}>Home</button>
-        <button className={currentPage.pathname == '/projects' ? activePageClass : inActivePageClass} onClick={() => navigate('/projects')} >Projects</button>
-        <button className={currentPage.pathname == '/qualifications' ? activePageClass : inActivePageClass}>Qualifications</button>
-      </div>
-      <div className='navbar-end'>
-        <button className='btn btn-circle' onClick={() => window.open("https://github.com/Sainosaur") }>
-          <img src="https://static-00.iconduck.com/assets.00/github-outline-icon-512x512-b2pa05gv.png" alt='github' />
-        </button>
-      </div>
-      
-    </div>
-    <Routes>
-      <Route path='/' Component={Home} />
-    </Routes>
+    <NavBar />
+      <Routes>
+        <Route path='/' Component={Home} />
+        <Route path='/projects' Component={Projects} />
+        <Route path='/certifications' Component={Certifications} />
+        <Route path='*' Component={FourOFour}/>
+      </Routes>
+    <Footer />
     </>
 
   )
 }
 
-export default App
+export default App;
