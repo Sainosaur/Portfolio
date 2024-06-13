@@ -50,18 +50,18 @@ const Certification = () => {
 
     return (
         <>
-            <div className="hero min-h screen gap-1 space-y-40 " style={{backgroundImage: 'url(https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'}}>
+            <div className="hero min-h-screen gap-1 space-y-40 " style={{backgroundImage: 'url(https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'}}>
             <div className="hero-overlay bg-opacity-60">
                 <p className="text-5xl text-slate-300 p-1 py-10 font-bold text-center">My Certifications:</p>
             </div>
-                <div className="card w-11/12 bg-base-100 space-y-5 p-5">
-                        <p className="card bg-warning text-black p-3">As a committed and enthusiastic junior web developer, I have obtained a diverse array of certifications that exemplify my dedication to continuous learning and professional development. Each certification underscores my proficiency in various frameworks, ensuring that I am thoroughly prepared to address the requirements of each project in the most efficient manner. Below are the certifications I have achieved:</p>
-                        <div className="divider">Certifications</div>
-                        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5  ">
-                            {certifications.map(certification => <RenderCertification key={certification.name} {...certification}/>)}
-                        </div>
-                    
-                </div>
+            <div className="card w-full bg-base-100 space-y-5 p-5">
+                    <p className="card bg-warning text-black p-3">As a committed and enthusiastic junior web developer, I have obtained a diverse array of certifications that exemplify my dedication to continuous learning and professional development. Each certification underscores my proficiency in various frameworks, ensuring that I am thoroughly prepared to address the requirements of each project in the most efficient manner. Below are the certifications I have achieved:</p>
+                    <div className="divider">Certifications</div>
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5 ">
+                        {certifications.map(certification => <RenderCertification key={certification.name} {...certification}/>)}
+                    </div>
+                
+            </div>
         </div>
         </>
     )

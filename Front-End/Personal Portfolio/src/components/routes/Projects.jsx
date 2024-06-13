@@ -9,7 +9,6 @@ const projects = [{
 }]
 
 const RenderProject = ({project}) => {
-    console.log(project.color)
     return (
             <div className={`card ${project.background} text-primary-content`}>
                     <div className="flex justify-col card-body">
@@ -40,7 +39,9 @@ const Projects = () => {
                 <div className="card w-full bg-base-100 p-3 space-y-5">
                     <p className="card bg-warning text-black p-5">Explore a collection of my latest endeavors and collaborations. Each project represents a unique blend of creativity, innovation, and problem-solving. View the projects to see them in action!</p>
                     <div className="divider">Projects</div>
-                    {projects.map((project) => <RenderProject key={project.name} project={project} /> )}
+                    <div className="grid lg:grid-cols-3">
+                        {projects.map((project) => <RenderProject key={project.name} project={project} /> )}
+                    </div>
                     <div className="divider"></div>
                     <button className="btn btn-warning text-xl " onClick={()=>document.getElementById('my_modal_2').showModal()}> + Add</button>
                     <dialog id="my_modal_2" className="modal">

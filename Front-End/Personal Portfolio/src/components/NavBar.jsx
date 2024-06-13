@@ -31,6 +31,7 @@ const NavBar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a onClick={() => navigate('/projects')}>Projects</a></li>
         <li><a onClick={() => navigate('/certifications')}>Certifications</a></li>
+        <li><a onClick={() => navigate('/contact')}>Contact Me!</a> </li>
       </ul>
     </div>
       <button className={currentPage.pathname == '/' ? ActiveLogoClass : inActiveLogoClass} onClick={() => navigate('/')}>
@@ -42,6 +43,7 @@ const NavBar = () => {
     <div className='navbar-center hidden lg:flex'>
       <button className={currentPage.pathname == '/projects' ? activePageClass : inActivePageClass} onClick={() => navigate('/projects')} >Projects</button>
       <button className={currentPage.pathname == '/certifications' ? activePageClass : inActivePageClass} onClick={() => navigate('/certifications')}>Certifications</button>
+      <button className={currentPage.pathname == '/contact' ? activePageClass : inActivePageClass } onClick={() => navigate('/contact' )}>Contact Me!</button>
     </div>
     <div className='navbar-end '>
       <button className='btn btn-circle p-2 btn-ghost' onClick={() => window.open("https://github.com/Sainosaur") }>
