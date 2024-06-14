@@ -1,5 +1,4 @@
 import { Routes, Route} from 'react-router'
-
 import Home from './components/routes/Home'
 import FourOFour from './components/routes/404'
 import Projects from './components/routes/Projects'
@@ -10,6 +9,7 @@ import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
+
 
 const App = () => {
   useEffect(() => {
