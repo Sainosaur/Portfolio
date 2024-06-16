@@ -30,7 +30,7 @@ const Certification = () => {
         name: "Full Stack Open 2024",
         organisation: "University Of Helsinki",
         link: "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/af2376dcfe2e53e5326391e20392b13b",
-        logoLink: `/src/assets/UoH-Logo-${logoColor}.png`
+        logoLink: `/UoH-Logo-${logoColor}.png`
     }, {
         name: "Full Stack GraphQL",
         organisation: "University of Helsinki",
@@ -40,7 +40,7 @@ const Certification = () => {
         name: "Full Stack Open TypeScript",
         organisation: "University of Helsinki",
         link: "https://studies.cs.helsinki.fi/stats/api/certificate/fs-typescript/en/6f51b0b369e44f59ad7c15ce798346e8",
-        logoLink: "src/assets/TS-Logo.png"
+        logoLink: "/TS-Logo.png"
     }, {
         name: "Introduction to Artifical Intelligence with Python",
         organisation: "CS50",

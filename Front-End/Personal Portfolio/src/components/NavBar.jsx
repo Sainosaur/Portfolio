@@ -36,7 +36,7 @@ const NavBar = () => {
     </div>
       <button className={currentPage.pathname == '/' ? ActiveLogoClass : inActiveLogoClass} onClick={() => navigate('/')}>
         <div className="w- rounded" >
-            <img src= {`src/assets/pd-logo-${logoStyle}.webp`} width="24" />
+            <img src= {`/pd-logo-${logoStyle}.webp`} width="24" />
         </div> 
       Project Delta </button>
     </div>
@@ -47,12 +47,12 @@ const NavBar = () => {
     </div>
     <div className='navbar-end '>
       <button className='btn btn-circle p-2 btn-ghost' onClick={() => window.open("https://github.com/Sainosaur") }>
-        <img src={`src/assets/icons/github-${themeState.logoInActive}.png`} alt='github' />
+        <img src={`/icons/github-${themeState.logoInActive}.png`} alt='github' />
       </button>
       {themeState.theme == "light" ? <button className="btn btn-circle btn-ghost p-2" data-set-theme="dark" data-key="theme" onClick={() => dispatch(setThemeDark())} >
-        <img src="src/assets/icons/dark-theme.png" />
+        <img src="/icons/dark-theme.png" />
          </button> : <button className="btn btn-circle btn-ghost p-2" data-set-theme="light" data-key="theme" onClick={() => dispatch(setThemeLight())} >
-          <img src="src/assets/icons/light-theme.png" />
+          <img src="/icons/light-theme.png" />
           </button>}
     </div>
   </div>
